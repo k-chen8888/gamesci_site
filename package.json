@@ -1,0 +1,22 @@
+{
+  "name": "game-science-675",
+  "version": "1.0.0",
+  "description": "Website/blog for Rutgers Game Science 675",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-chen8888/gamesci_site.git"
+  },
+  "author": "Kevin Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-chen8888/gamesci_site/issues"
+  },
+  "homepage": "https://github.com/k-chen8888/gamesci_site#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

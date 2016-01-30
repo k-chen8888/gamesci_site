@@ -1,6 +1,4 @@
-var Express = require('Express');
-
-module.exports = function(app) {
+module.exports = function(app, Express) {
 	// Attach middleware to get static content for each game
 	app.use(Express.static(__dirname + '/RandoMaze'));
 	

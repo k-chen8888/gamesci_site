@@ -7,7 +7,7 @@ var http = require('http').Server(app),
 
 // A module that outputs a list games that I've made and where to find them
 // Also attaches middleware for finding the static content that Unity3D needs to run
-var games = require('./modules/games/games.js')(app);
+var games = require('./modules/games/games.js')(app, Express);
 
 /* Middleware */
 

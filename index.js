@@ -9,6 +9,10 @@ var http = require('http').Server(app),
 // Also attaches middleware for finding the static content that Unity3D needs to run
 var games = require('./modules/games/games.js')(__dirname + '/pages/games/');
 
+// Database module
+var db = require('./modules/db/db.js')(process.env.MONGOLAB_URI || undefined, require('mongoose'));
+
+
 /* Middleware */
 
 // Static content

@@ -5,8 +5,8 @@ var http = require('http').Server(app),
 	port = process.env.PORT || 1337;
 
 
-// A module that outputs a list games that I've made and where to find them
-// Also attaches middleware for finding the static content that Unity3D needs to run
+// A module for listing out the games I've made
+// Contains callback functions that load those games
 var games = require('./modules/games/games.js')(__dirname + '/pages/games/');
 
 // Database module
@@ -35,9 +35,7 @@ app.get('/blog', function(req, res) {
 /* Games */
 
 // RandoMaze
-app.get('/RandoMaze', function(req, res) {
-	res.sendFile(games.RandoMaze);
-});
+app.get('/RandoMaze', games.RandoMaze);
 
 
 /* Starts up the server */

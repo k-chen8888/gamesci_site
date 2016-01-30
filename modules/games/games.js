@@ -1,5 +1,7 @@
 module.exports = function(games_dir) {
 	return {
-		'RandoMaze' : games_dir + '/RandoMaze/index.html'
+		'RandoMaze' : function(req, res) {
+			res.sendFile(games_dir + '/RandoMaze/index.html');
+		}
 	};
 }

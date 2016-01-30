@@ -1,8 +1,5 @@
-module.exports = function(app, Express) {
-	// Attach middleware to get static content for each game
-	app.use(Express.static(__dirname + '/RandoMaze'));
-	
+module.exports = function(games_dir) {
 	return {
-		'RandoMaze' : __dirname + '/RandoMaze/index.html'
+		'RandoMaze' : games_dir + '/RandoMaze/index.html'
 	};
 }

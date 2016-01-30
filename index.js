@@ -2,7 +2,7 @@ var Express = require('express');
 var app = Express();
 
 var http = require('http').Server(app),
-	port = 1337;
+	port = process.env.PORT || 1337;
 
 
 // A module that outputs a list games that I've made and where to find them

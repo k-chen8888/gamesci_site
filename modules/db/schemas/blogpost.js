@@ -80,6 +80,15 @@ module.exports = function(db) {
 		});
 	};
 	
+	// Reset the counter to reflect the number of documents in the database
+	BlogPost.recount = function() {
+		BlogPost.model.find({}, function(err, posts) {
+			if (err || !posts[0]) BlogPost.count = 0;
+			else BlogPost.count = posts.length;
+		});
+	};
+	BlogPost.recount();
+	
 	
 	// Output
 	db.BlogPost = BlogPost;

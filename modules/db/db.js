@@ -11,7 +11,7 @@ module.exports = function(uri, mongoose) {
 	/* Database Collections */
 	
 	// Blog posts
-	require('./modules/db/schemas/blogpost.js')(exports);
+	require('./schemas/blogpost.js')(exports);
 	
 	
 	return exports;

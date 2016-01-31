@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+	head
+		title Game Science Blog
+	body
+		ul
+			each val in posts
+				li
+					a(href='/blog?id=' + val.post_id) #{val.title}

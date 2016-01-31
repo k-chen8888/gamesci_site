@@ -23,7 +23,7 @@ module.exports = function(util, pages, secret) {
 	exports.routes.viewPost = function(req, res, id) {
 		if (exports.db) {
 			exports.db.BlogPost.getBlogPost(id).then(function(post) {
-				db.BlogPost.getBlogPost(id).then(function(post) {
+				exports.db.BlogPost.getBlogPost(id).then(function(post) {
 					res.render(pages.blog + 'post', {title: post.title, body: post.body});
 				}, function(err) {
 					res.redirect('/blog'); // Go back to the list of blog posts
@@ -49,7 +49,7 @@ module.exports = function(util, pages, secret) {
 	exports.routes.createPost = function(req, res) {
 		// Add to database if conditions are met
 		if (exports.db && req.body.secret == secret) {
-			db.BlogPost.addBlogPost({
+			exports.db.BlogPost.addBlogPost({
 				title: req.body.title,
 				body: req.body.body
 			}).then(function(post) {

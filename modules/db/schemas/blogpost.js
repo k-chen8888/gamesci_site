@@ -77,7 +77,7 @@ module.exports = function(db) {
 					else resolve(posts[0]);
 				});
 			}
-		};
+		});
 	};
 	
 	

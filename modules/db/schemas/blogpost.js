@@ -1,6 +1,5 @@
 module.exports = function(db) {
-	var Schema = db.mongoose.Schema,
-		model = db.mongoose.model;
+	var Schema = db.mongoose.Schema;
 	
 	BlogPost = {count: 0};
 	
@@ -26,7 +25,7 @@ module.exports = function(db) {
 	BlogPost.Schema.index({'post_id': 1});
 	
 	// Convert the Schema into a model
-	BlogPost.model = model('BlogPost', BlogPost.Schema, 'blogposts');
+	BlogPost.model = db.mongoose.model('BlogPost', BlogPost.Schema, 'blogposts');
 	
 	
 	/* Utility Methods */

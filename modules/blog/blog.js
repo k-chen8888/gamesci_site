@@ -11,7 +11,6 @@ module.exports = function(util, pages, secret) {
 		else {
 			if (exports.db) {
 				exports.db.BlogPost.getBlogPost({}, {post_id: -1}).then(function(posts) {
-					console.log(posts);
 					res.render(pages.blog + 'index', {posts: posts});
 				}, function (err) {
 					res.sendFile(pages.blog + 'index.html');

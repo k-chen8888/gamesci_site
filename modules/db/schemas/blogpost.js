@@ -73,6 +73,7 @@ module.exports = function(db) {
 				.sort(sort || {post_id: 1})
 				.exec(function(err, posts) {
 					if (err || !posts[0]) reject(err || new Error('Blog post not found'));
+					else if (sort) resolve(posts);
 					else resolve(posts[0]);
 				});
 			}

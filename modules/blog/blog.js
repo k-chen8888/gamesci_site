@@ -22,14 +22,10 @@ module.exports = function(util, pages, secret) {
 	// View a blog post (GET)
 	exports.routes.viewPost = function(req, res, id) {
 		if (exports.db) {
-			exports.db.BlogPost.getBlogPost(id).then(function(post) {
-				exports.db.BlogPost.getBlogPost(id).then(function(post) {
-					res.render(pages.blog + 'post', {title: post.title, body: post.body});
-				}, function(err) {
-					res.redirect('/blog'); // Go back to the list of blog posts
-				});
+			exports.db.BlogPost.getBlogPost(Number.parseInt(id), 10).then(function(post) {
+				res.render(pages.blog + 'post', {title: post.title, body: post.body});
 			}, function(err) {
-				res.sendFile(pages.error + '/404.html');
+				res.sendFile(pages.error + '/404.html'); // Display a 404 NOT FOUND
 			});
 		} else res.sendFile(pages.blog + 'post.html');
 	};

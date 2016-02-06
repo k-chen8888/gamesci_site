@@ -6,8 +6,8 @@ html(lang="en")
 	body
 		ul
 			each val in posts
-				div.post#val.post_id
+				div(class="post" id="#{val.post_id}")
 					h1
 						a(href='/blog?id=' + val.post_id) #{val.title}
 					hr
-					p #{val.summary}
+					p !{val.summary}

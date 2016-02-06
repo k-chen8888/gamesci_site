@@ -10,6 +10,10 @@ div.post h1 {
     padding: 0vh 2.5vw 0vh 2.5vw;
 }
 
+div.post h1 a:link {
+    text-decoration: none;
+}
+
 div.post hr {
 	border: 0;
 	height: 1px;

@@ -2,8 +2,12 @@ doctype html
 html(lang="en")
 	head
 		title Game Science Blog
+		link(rel='stylesheet', href='/blag/css/index.css')
 	body
 		ul
 			each val in posts
-				li
-					a(href='/blog?id=' + val.post_id) #{val.title}
+				div.post#val.post_id
+					h1
+						a(href='/blog?id=' + val.post_id) #{val.title}
+					hr
+					p #{val.summary}

@@ -19,7 +19,7 @@ module.exports = function(util, pages, secret) {
 						return {
 							title: curr.title,
 							post_id: curr.post_id,
-							summary: '<p class="summary">' + fixTags(summary) + '[<a href="/blog?id=' + (posts.length - i) + '>...</a>]</p>'
+							summary: '<p class="summary">' + fixTags(summary) + '[<a href="/blog?id=' + curr.post_id + '">...</a>]</p>'
 						};
 					});
 					

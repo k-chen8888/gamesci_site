@@ -10,5 +10,5 @@ div.documentation div table {
 
 div.documentation div table tr:nth-child(even) {
 	/* All tables in the docs alternate color */
-    background-color: #000000;
+    background-color: #d3d3d3;
 }

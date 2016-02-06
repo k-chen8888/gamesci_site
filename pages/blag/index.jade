@@ -4,10 +4,9 @@ html(lang="en")
 		title Game Science Blog
 		link(rel='stylesheet', href='/blag/css/index.css')
 	body
-		ul
-			each val in posts
-				div(class="post" id="#{val.post_id}")
-					h1
-						a(href='/blog?id=' + val.post_id) #{val.title}
-					hr
-					!{val.summary}
+		each val in posts
+			div(class="post" id="#{val.post_id}")
+				h1
+					a(href='/blog?id=' + val.post_id) #{val.title}
+				hr
+				!{val.summary}

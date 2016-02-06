@@ -1,0 +1,25 @@
+div.post {
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 0vh 0vw 3vh 0vw;
+}
+
+div.post h1 {
+    padding: 0vh 2.5vw 0vh 2.5vw;
+}
+
+div.post hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	width:100%;
+}
+
+div.post p {
+    padding: 0vh 5vw 0vh 5vw;
+}

@@ -63,6 +63,9 @@ app.post('/blog/write', blog.routes.createPost);
 // RandoMaze
 app.get('/RandoMaze', games.RandoMaze);
 
+// AstralProjector
+app.get('/AstralProjector', games.AstralProjector);
+
 
 /* Download a hosted file */
 app.get('/download', function(req, res){

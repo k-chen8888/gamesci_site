@@ -66,8 +66,8 @@ app.get('/RandoMaze', games.RandoMaze);
 
 /* Download a hosted file */
 app.get('/download', function(req, res){
-	if (!req.query.name || !req.query.ext) res.sendFile('/pages/error/404.html');
-	else res.download(__dirname + '/pages/downloads/' + req.query.name + '.' + req.query.ext);
+	if (!req.query.name || !req.query.version || !req.query.ext) res.sendFile('/pages/error/404.html');
+	else res.download(__dirname + '/pages/downloads/' + req.query.name + '/' + req.query.name + '-v' + req.query.version + '.' + req.query.ext);
 });
 
 

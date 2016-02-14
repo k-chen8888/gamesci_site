@@ -5,7 +5,7 @@ module.exports = function(games_dir) {
 		},
 		'AstralProjector' : function(req, res) {
 			res.sendFile(games_dir + '/AstralProjector/index.html');
-		}
+		},
 		'PickMeUp' : function(req, res) {
 			res.sendFile(games_dir + '/PickMeUp/index.html');
 		}

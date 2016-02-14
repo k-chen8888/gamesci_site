@@ -60,7 +60,7 @@ app.post('/blog/write', blog.routes.createPost);
 
 /* Games */
 
-app.get('/play'), function(req, res) {
+app.get('/play', function(req, res) {
 	res.send('<h1>A list of games and demos found on this site</h1>');
 });
 

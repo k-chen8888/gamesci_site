@@ -3,4 +3,10 @@ html(lang="en")
 	head
 		title #{title}
 		link(rel='stylesheet', href='/blag/css/post.css')
-	body !{body}
+	body
+		div.heading
+			div.backbutton
+				a(href='/blog')
+			div.title
+				a(href='#heading') #{title}
+		div.postContent !{body}
